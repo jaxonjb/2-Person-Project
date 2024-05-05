@@ -558,25 +558,9 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: -2828781046894978522, guid: fbf4e34ade14a464c8bc0fb5198bfd76, type: 3}
-      propertyPath: m_Size.x
-      value: 1.6
-      objectReference: {fileID: 0}
-    - target: {fileID: -2828781046894978522, guid: fbf4e34ade14a464c8bc0fb5198bfd76, type: 3}
-      propertyPath: m_Size.y
-      value: 3.35
-      objectReference: {fileID: 0}
     - target: {fileID: 5004284496530860512, guid: fbf4e34ade14a464c8bc0fb5198bfd76, type: 3}
       propertyPath: m_Name
       value: Player
-      objectReference: {fileID: 0}
-    - target: {fileID: 8169152656260307474, guid: fbf4e34ade14a464c8bc0fb5198bfd76, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8169152656260307474, guid: fbf4e34ade14a464c8bc0fb5198bfd76, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8169152656260307474, guid: fbf4e34ade14a464c8bc0fb5198bfd76, type: 3}
       propertyPath: m_LocalPosition.x
@@ -584,7 +568,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8169152656260307474, guid: fbf4e34ade14a464c8bc0fb5198bfd76, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.9
+      value: 0.76
       objectReference: {fileID: 0}
     - target: {fileID: 8169152656260307474, guid: fbf4e34ade14a464c8bc0fb5198bfd76, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1024,9 +1008,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   potionText: {fileID: 0}
-  force: 500
-  radius: 5
-  delay: 1
   potionCount: 20
   player: {fileID: 601919279}
   gameOverScreen: {fileID: 1399124950}

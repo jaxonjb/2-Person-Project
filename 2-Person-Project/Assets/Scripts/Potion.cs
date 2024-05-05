@@ -8,9 +8,7 @@ using UnityEngine.SceneManagement;
 public class Potion : MonoBehaviour
 {
     public Text potionText;
-    public float force = 1f;
-    public float radius = 5.0f;
-    public float delay = 1.0f;
+    private float force = 1000f;
     public int potionCount = 20;
     public GameObject player;
     private Rigidbody2D rigidbody;
@@ -35,6 +33,7 @@ public class Potion : MonoBehaviour
         if(Input.GetKeyUp(KeyCode.Mouse0))
         {
             ApplyForce(pos);
+            ExplosionAnimation(pos);
             potionCount--;
         }
         transform.position = pos;
@@ -44,8 +43,14 @@ public class Potion : MonoBehaviour
     {
         Vector2 launchAngle = (rigidbody.position - pos).normalized;
         float finalForce = force * (1/Vector2.Distance(rigidbody.position, pos));
-        if(finalForce > 500f) finalForce = 500f;
+        if(finalForce > 1000f) finalForce = 1000f;
         rigidbody.AddRelativeForce(launchAngle * finalForce, ForceMode2D.Force);
+    }
+    private void ExplosionAnimation(Vector2 pos)
+    {
+        GameObject e = Instantiate(Resources.Load("Prefabs/Explosion") as GameObject);
+        e.transform.position = pos;
+        Destroy(e, 1.1f);
     }
 
 
