@@ -6,10 +6,11 @@ using UnityEngine.SceneManagement;
 
 public class DoorBehaviour : MonoBehaviour
 {
+    private Potion p;
     // Start is called before the first frame update
     void Start()
     {
-        
+        p = FindFirstObjectByType<Potion>();
     }
 
     // Update is called once per frame
@@ -20,7 +21,12 @@ public class DoorBehaviour : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other) {
         if (other.tag == "Player") {
-            SceneManager.LoadScene(1 + (SceneManager.GetActiveScene().buildIndex % 3));
+            loadScene((SceneManager.GetActiveScene().buildIndex + 1) % 3);
         }
+    }
+
+    public void loadScene(int index) {
+        SceneManager.LoadScene(index);
+        p.potionCount = 20;
     }
 }
